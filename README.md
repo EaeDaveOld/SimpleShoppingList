@@ -12,3 +12,9 @@ Todos os dados são persistidos enquanto o programa estiver rodando, ou no loop,
 Não possui interface gráfica, então toda interação é feita pelo terminal do sistema operacional.
 
 Se o seu sistema for MacOs ou Linux, substitua a variável "limpar_console = os.system('cls')" para "limpar_console = os.system('clear')".
+
+## Usando o poetry
+
+#### Rode o comando `poetry shell`
+#### Rode o comando `poetry install`
+#### Execute o projeto com `python3 lista_compras.py`
