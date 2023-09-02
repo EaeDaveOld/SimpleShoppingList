@@ -15,7 +15,7 @@ import time
 
 
 start = True  # Variável de controle de laço
-lista = []
+lista = {}
 tempo_espera = 2
 limpar_console = os.system('cls')
 
@@ -40,8 +40,9 @@ while start:
 
         print(f'Lista atual = {lista}')
         item = input('Digite o nome do item que deseja adicionar: ')
-        lista.append(item)
-        print(f'O item "{item}" foi adicionado na lista.')
+        preco = float(input('Qual valor desse item? '))
+        lista[item] = preco
+        print(f'O item "{item}" foi adicionado na lista ao valor de R$ {preco} reais.')
 
         time.sleep(tempo_espera)
         limpar_console  # Limpa o console
@@ -52,7 +53,7 @@ while start:
         item = input('Digite o nome do item que deseja remover: ')
         if item in lista:
             limpar_console  # Limpa o console
-            lista.remove(item)
+            lista.pop(item)
             print(
                 f'O item "{item}" foi removido da lista.')
 
@@ -72,11 +73,9 @@ while start:
         if item in lista:
             limpar_console  # Limpa o console
 
-            indice = lista.index(item)
-            item_modificado = input(
-                f'Digite o nome do item que irá substituir {item}: ')
-            lista[indice] = item_modificado
+            item_modificado = input(f'Digite o nome do item que irá substituir {item}: ')
 
+            lista[item]
             print(f'O item {item} foi substituído por {item_modificado}.')
 
             time.sleep(tempo_espera)
